@@ -1,4 +1,4 @@
-// package functionalProgrammingInJava;
+package functionalProgrammingInJava;
 
 import java.util.ArrayList;
 import java.util.Comparator;
