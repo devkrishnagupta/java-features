@@ -1,4 +1,5 @@
 package functionalProgrammingInJava;
+
 import java.util.stream.Collectors;
 //Functions of the streams API:- count + min + max + sum + average + filter + map + distinct + collect + flatMap + mapToInt + summaryStatistics(return IntSummaryStatistics)
 public class FindFrequencyInSingleWord {
