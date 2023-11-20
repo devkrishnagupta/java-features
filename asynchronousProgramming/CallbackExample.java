@@ -13,10 +13,13 @@ public class CallbackExample {
             System.out.println("I am in completableFuture - "+Thread.currentThread().getName());
             return "Tech recipes";
         }, executorService).thenApply(s->{
+            System.out.println("Inside thenApply()");
             return "Hello  from thenApply - "+Thread.currentThread().getName();
         }).thenAccept(s -> {
+            System.out.println("Inside thenAccept()");
             System.out.println("Result set is - "+Thread.currentThread().getName());
         }).thenRun(() -> {
+            System.out.println("Inside thenRun()");
             System.out.println("Inside run method - "+Thread.currentThread().getName());
         });
         System.out.println("I am in main thread - "+Thread.currentThread().getName());
