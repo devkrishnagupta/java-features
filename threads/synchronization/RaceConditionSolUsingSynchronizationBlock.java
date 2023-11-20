@@ -21,7 +21,6 @@ public class RaceConditionSolUsingSynchronizationBlock {
         Thread thread2 = new Thread(depositTask);
         Thread thread3 = new Thread(withdrawTask);
         Thread thread4 = new Thread(withdrawTask);
-
         
         thread4.start();
         thread1.start();
