@@ -1,7 +1,5 @@
 package threads.deadlockFree;
 
-import javax.management.RuntimeErrorException;
-
 class EvenOddPrinting implements Runnable{
 
     static int counter = 1;
