@@ -17,12 +17,21 @@ public class FindingCharactersInString {
         List<Character> ans2 = str.chars()
                             .mapToObj(ch -> (char)ch)
                             .filter(
-                                ch->Character.valueOf(Character.toUpperCase(ch)) >= 65 &&
-                                Character.valueOf(Character.toUpperCase(ch)) <= 90
+                                ch->Character.toUpperCase(ch) >= 65 &&
+                                Character.toUpperCase(ch) <= 90
+                            )
+                            .collect(Collectors.toList());
+
+        List<Character> ans3 = str.chars()
+                            .mapToObj(ch -> (char)ch)
+                            .filter(
+                                ch->Character.valueOf(Character.toUpperCase(ch)) >= 'A' &&
+                                Character.valueOf(Character.toUpperCase(ch)) <= 'Z'
                             )
                             .collect(Collectors.toList());
 
         System.out.println("Answers1 => "+ans1);
         System.out.println("Answers2 => "+ans2);
+        System.out.println("Answers2 => "+ans3);
     }
 }
