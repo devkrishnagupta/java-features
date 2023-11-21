@@ -27,3 +27,12 @@ public class Test {
         }
     }
 }
+
+class TestException extends RuntimeException {
+    private static ArithmeticException e;
+    public static void main(String[] args) {
+  
+        //throw new TestException();
+     
+    }
+}

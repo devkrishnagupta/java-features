@@ -1,4 +1,4 @@
-package optimalPerformanceExamples;
+package optimalPerformanceExamples.sumOfEvenNumbersFromList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class SumOfEvenNumbersInRandomSizeList {
+public class UsingExecutorServiceRandomSizeList {
     public static void main(String[] args) {
         System.out.println("Hello World!");
         AtomicInteger sum = new AtomicInteger();
@@ -40,7 +40,7 @@ public class SumOfEvenNumbersInRandomSizeList {
         while (!executor.isTerminated()) {
             //Waiting for executor to complete it's tasks
         }
-        System.out.println("Final sum of even numbers: "+sum);        
+        System.out.println("\nFinal sum of even numbers: "+sum);        
     }
 
     public static int getRandomNumber(){
