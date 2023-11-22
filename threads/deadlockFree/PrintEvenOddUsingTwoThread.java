@@ -11,18 +11,17 @@ class EvenOddPrinting implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("Run method started by "+Thread.currentThread().getName());
         while (counter < 10) {
             if (Thread.currentThread().getName().equals("even") && counter%2==0) {
                 synchronized(lock){
-                    System.out.println("Printing by thread "+Thread.currentThread().getName()+" and Number is "+counter);
+                    System.out.println("Even Thread "+Thread.currentThread().getName()+" and Number is "+counter);
                     counter++;
                     lock.notify();
                 }
             }
             if (Thread.currentThread().getName().equals("odd") && counter%2!=0) {
                 synchronized(lock){
-                    System.out.println("Printing by thread "+Thread.currentThread().getName()+" and Number is "+counter);
+                    System.out.println("Odd Thread "+Thread.currentThread().getName()+" and Number is "+counter);
                     counter++;
                     try{
                         lock.wait();
