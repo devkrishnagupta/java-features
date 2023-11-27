@@ -20,10 +20,25 @@ public class YoungStudentInDepartmentWise {
                             );
 
         System.out.println("Youngest students in each depatrtments");
-        System.out.println(youngestStudentsInEachDept);
+        // System.out.println(youngestStudentsInEachDept);
         System.out.println("------------------------------------------------------");
         youngestStudentsInEachDept.forEach((key, value)->{
-            System.out.println("Department: "+key+" Age: "+value.getAge());
+            System.out.println("Department: " + key + " Age: "+value.getAge());
+        });
+        System.out.println("------------------------------------------------------");
+        Map<String, Student> youngestStudentsInEachDept2 = list.stream()
+                                    .collect(Collectors.groupingBy(Student::getDepartmantName)) //Here return type is Map<String, List<Student>>
+                                    .entrySet()
+                                    .stream()
+                                    .collect(
+                                        Collectors.toMap(
+                                            Map.Entry::getKey, 
+                                            entry -> entry.getValue().stream().sorted(Comparator.comparing(Student::getAge)).findFirst().get()
+                                        )
+                                    );
+        // System.out.println(youngestStudentsInEachDept2);
+        youngestStudentsInEachDept2.forEach((key, value)->{
+            System.out.println("Department: " + key + " Age: "+value.getAge());
         });
     }
 }
