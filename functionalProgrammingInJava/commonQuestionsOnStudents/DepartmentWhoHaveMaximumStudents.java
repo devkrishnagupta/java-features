@@ -37,9 +37,6 @@ public class DepartmentWhoHaveMaximumStudents {
                                     .max(Map.Entry.comparingByValue())
                                     .get();
 
-        System.out.println("Department with maximum students: " + entry.getKey());
-                                    
-                                    
-                                    
+        System.out.println("Department with maximum students: " + entry.getKey());                    
     }
 }
