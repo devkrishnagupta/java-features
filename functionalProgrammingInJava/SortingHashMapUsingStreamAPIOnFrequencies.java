@@ -14,9 +14,12 @@ public class SortingHashMapUsingStreamAPIOnFrequencies {
         Map<String, Integer> map = strings
                 .stream()
                 .collect(
-                        Collectors.toMap(Function.identity(),
-                                String::length, (i1, i2) -> i1,
-                                LinkedHashMap::new))
+                    Collectors.toMap(
+                        Function.identity(),
+                        String::length, (i1, i2) -> i1,
+                        LinkedHashMap::new
+                    )
+                )
                 .entrySet()
                 .stream()
                 // .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
