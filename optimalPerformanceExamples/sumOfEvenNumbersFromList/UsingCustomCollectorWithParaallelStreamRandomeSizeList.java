@@ -11,7 +11,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collector;
 
-public class UsingParaallelStreamWithCustomCollectorRandomeSizeList {
+public class UsingCustomCollectorWithParaallelStreamRandomeSizeList {
     public static void main(String[] args) {
         Random random = new Random();
         int listSize = random.nextInt(10)+1; // Random size between 1 to 10
