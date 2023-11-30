@@ -29,7 +29,7 @@ public class UsingCountDownLatchRandomSizeList {
             });
             thread.start();
         }
-        latch.await();
+        latch.await(); // Wait for all threads to complete
         System.out.println("Sum of even numbers: "+totalSum);
     }
 
