@@ -18,11 +18,12 @@ public class UsingFuture {
         };
         Future<String> future = executorService.submit(callable);
         System.out.println("Do something else");
-        delay(1);
-        String message = "";
+        String message = "Empty";
         try {
-            message = future.get();
-        } catch (InterruptedException | ExecutionException e) {
+            System.out.println("Is Task completed Before Get: "+future.isDone());
+            message = future.get();//so Future.get is blocking the thread
+            System.out.println("Is Task completed After Get: "+future.isDone());
+        } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
