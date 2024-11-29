@@ -20,6 +20,7 @@ public class Test {
             } else {
                 System.out.println("Entered number is: " + number);
             }
+            System.out.println("Code executed");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         } finally {
